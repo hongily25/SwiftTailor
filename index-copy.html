@@ -81,25 +81,47 @@
 										function manFunc( jQuery ) {
 											$('#about').css('height','300');
 										document.getElementById('selectIMG').innerHTML = '';
-   $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img id='scanIMG' src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><div class='btn btn-light btn-lg' id='manHref' style='border-radius:10px;width:150px' target='_blank'>Start scan</div>");
+   $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img id='scanIMG' src='http://i.imgur.com/4iq8MS0.png'><br><br><div class='btn btn-light btn-lg' id='manHref' style='border-radius:10px;width:150px' target='_blank'>Start scan</div>");
 		
 											
 						var scanClickCount = 0;
 											
 						var scanClick = function(){
 							if(scanClickCount == 0){
-								$('#scanIMG').attr('src','1');
+								$('#scanIMG').attr('src','http://i.imgur.com/ZDfpX7E.png');
 								$('#manHref').text('Next');
 							}else if (scanClickCount == 1) {
-								$('#scanIMG').attr('src','2');
+								$('#scanIMG').attr('src','http://i.imgur.com/8mXVTvr.png');
 								$('#manHref').text('Last step');
 							}else if (scanClickCount == 2) {
-								$('#scanIMG').attr('src','3');
+								$('#scanIMG').attr('src','http://i.imgur.com/xfQCDp3.png');
 								$('#manHref').css('display','none');
 								$('#scanData').prepend("<h2 style='color:#000'>You're finished! Here are your results:</h2><br>");
-								$('html').animate({
-		scrollTop: $("#portfolio").offset().top
-	},1000);
+								document.getElementById('selectIMG').innerHTML = '';
+								document.getElementsByTagName('input')[0].placeholder = '16.2';
+								document.getElementsByTagName('input')[1].placeholder = '13.3';
+								document.getElementsByTagName('input')[2].placeholder = '15.5';
+								document.getElementsByTagName('input')[3].placeholder = '36.7';
+								document.getElementsByTagName('input')[4].placeholder = '21.2';
+								document.getElementsByTagName('input')[5].placeholder = '6.4';
+								document.getElementsByTagName('input')[6].placeholder = '73.1';
+								document.getElementsByTagName('input')[7].placeholder = '26.0';
+								document.getElementsByTagName('input')[8].placeholder = '15.3';
+								document.getElementsByTagName('input')[9].placeholder = '25.2';
+								document.getElementsByTagName('input')[10].placeholder = '8.8';
+								document.getElementsByTagName('input')[11].placeholder = '11.8';
+								document.getElementsByTagName('input')[12].placeholder = '18.3';
+								document.getElementsByTagName('input')[13].placeholder = '22.2';
+								document.getElementsByTagName('input')[14].placeholder = '8.1';
+								document.getElementsByTagName('input')[15].placeholder = '17.6';
+								document.getElementsByTagName('input')[16].placeholder = '22.2';
+								document.getElementsByTagName('input')[17].placeholder = '11.5';
+								document.getElementsByTagName('input')[18].placeholder = '9.9';
+								document.getElementsByTagName('input')[19].placeholder = '13.5';
+								document.getElementsByTagName('input')[20].placeholder = '17.2';
+								document.getElementsByTagName('input')[21].placeholder = '43.0';
+								document.getElementsByTagName('input')[22].placeholder = '14.2';
+								document.getElementsByTagName('input')[23].placeholder = '26.3';
 							}
 							scanClickCount++;
 						}
@@ -172,28 +194,28 @@ $( document ).ready( manFunc );
 										<td><b>Yoke</b><br><input></td>
 										</tr>
 										<tr>
-										<td><b>Jacket Half Waist</b><br><input></td>
-										<td><b>Jacket Half Armhold</b><br><input></td>
-										<td><b>Jacket Half Girth</b><br><input></td>
-										<td><b>Yoke</b><br><input></td>
+										<td><b>Shoulder</b><br><input></td>
+										<td><b>Jacket Length Lower</b><br><input></td>
+										<td><b>Jacket Length Upper</b><br><input></td>
+										<td><b>Sleeve Length</b><br><input></td>
 										</tr>
 										<tr>
-										<td><b>Jacket Half Waist</b><br><input></td>
-										<td><b>Jacket Half Armhold</b><br><input></td>
-										<td><b>Jacket Half Girth</b><br><input></td>
-										<td><b>Yoke</b><br><input></td>
+										<td><b>Sleeve Width</b><br><input></td>
+										<td><b>Sleeve Inseam</b><br><input></td>
+										<td><b>Bottom Hem Width</b><br><input></td>
+										<td><b>Half Back Width</b><br><input></td>
 										</tr>
 										<tr>
-										<td><b>Jacket Half Waist</b><br><input></td>
-										<td><b>Jacket Half Armhold</b><br><input></td>
-										<td><b>Jacket Half Girth</b><br><input></td>
-										<td><b>Yoke</b><br><input></td>
+										<td><b>Jacket Back Length</b><br><input></td>
+										<td><b>Half Waist</b><br><input></td>
+										<td><b>Half Hips</b><br><input></td>
+										<td><b>Front Rise</b><br><input></td>
 										</tr>
 										<tr>
-										<td><b>Jacket Half Waist</b><br><input></td>
-										<td><b>Jacket Half Armhold</b><br><input></td>
-										<td><b>Jacket Half Girth</b><br><input></td>
-										<td><b>Yoke</b><br><input></td>
+										<td><b>Back Rise</b><br><input></td>
+										<td><b>Inseam</b><br><input></td>
+										<td><b>Half Thigh</b><br><input></td>
+										<td><b>Outseam Pants Length</b><br><input></td>
 										</tr>
 										</table>  </div>
 									

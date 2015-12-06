@@ -254,3 +254,11 @@ footer {
 #about.about {
 	height:800px
 }
+
+input{
+	color: black;
+}
+
+img#scanIMG {
+	height: 350px;
+}
