@@ -79,7 +79,7 @@
             <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px" onclick="manFunc()">Man</a>
 									<script>
 										function manFunc( jQuery ) {
-											
+										document.getElementById('#selectIMG').innerHTML = '';
    $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><a href='index-copy2.html' class='btn btn-light btn-lg' style='border-radius:10px;width:150px' target='_blank'>Scan now</a>");
 }
  
@@ -93,7 +93,6 @@ $( document ).ready( manFunc );
 										function womanFunc( jQuery ) {
    $('#selectIMG').append("<h2>Great! Now, stand like this. </h2><br><img src='http://hongily25.github.io/SwiftTailor/img/woman-copy-two.png'><br><br><a href='index-copy2.html' class='btn btn-light btn-lg' style='border-radius:10px;width:150px' target='_blank'>Scan now</a>");
 }
- 
 $( document ).ready( manFunc );
 									
 									</script>
