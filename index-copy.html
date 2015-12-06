@@ -76,7 +76,14 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
             <h1>I am a:</h1><br>
-            <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px">Man</a><br><br>
+            <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px" onclick="manFunc()">Man</a>
+									<script>
+										var node = "<img src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'>";
+									document.getElementById("selectIMG").appendChild(node);
+									
+									</script>
+									
+									<br><br>
             <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px">Woman</a><br><br>
 					
                 </div>
@@ -94,7 +101,7 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>Great! Now, stand like this. </h2>
                     
-                   	<img src="http://hongily25.github.io/SwiftTailor/img/stand-copy.png">
+									<div id="selectIMG"></div>
 									<br><br>
 									<a href="index-copy2.html" class="btn btn-light btn-lg" style="border-radius:10px;width:150px" target="_blank">Scan now</a><br><br>
 									
