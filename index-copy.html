@@ -79,7 +79,10 @@
             <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px" onclick="manFunc()">Man</a>
 									<script>
 										function manFunc( jQuery ) {
-   $('#selectIMG').append("<img src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'>");
+											
+   $('#selectIMG').append("<h2>Great! Now, stand like this. </h2>
+									<br><br>
+									<a href="index-copy2.html" class="btn btn-light btn-lg" style="border-radius:10px;width:150px" target="_blank">Scan now</a> <img src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'>");
 }
  
 $( document ).ready( manFunc );
@@ -87,7 +90,19 @@ $( document ).ready( manFunc );
 									</script>
 									
 									<br><br>
-            <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px">Woman</a><br><br>
+            <a href="#services" class="btn btn-dark btn-lg" onclick="womanFunc()"style="border-radius:10px;width:150px">Woman</a>
+									<script>
+										function womanFunc( jQuery ) {
+   $('#selectIMG').append("<h2>Great! Now, stand like this. </h2>
+									<br><br>
+									<a href="index-copy2.html" class="btn btn-light btn-lg" style="border-radius:10px;width:150px" target="_blank">Scan now</a> <img src='http://hongily25.github.io/SwiftTailor/img/woman.png'>");
+}
+ 
+$( document ).ready( manFunc );
+									
+									</script>
+									
+									<br><br>
 					
                 </div>
             </div>
@@ -102,11 +117,11 @@ $( document ).ready( manFunc );
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Great! Now, stand like this. </h2>
+                    
                     
 									<div id="selectIMG"></div>
-									<br><br>
-									<a href="index-copy2.html" class="btn btn-light btn-lg" style="border-radius:10px;width:150px" target="_blank">Scan now</a><br><br>
+									
+								<br><br>
 									
                     <!-- /.row (nested) -->
                 </div>
