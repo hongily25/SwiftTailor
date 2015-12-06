@@ -238,6 +238,6 @@ footer {
     padding: 100px 0;
 }
 
-#scanData > table > tr > td > b {
+#scanData > table > tbody > tr > td > b {
 	color: #000;
 }
