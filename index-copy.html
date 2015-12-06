@@ -83,24 +83,27 @@
 										document.getElementById('selectIMG').innerHTML = '';
    $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img id='scanIMG' src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><div class='btn btn-light btn-lg' id='manHref' style='border-radius:10px;width:150px' target='_blank'>Start scan</div>");
 		
-						$('#manHref').click(scanClick);
+						$('#manHref').click(scanClick1);
 											
 						var scanClickCount = 0;
+											
 						var scanClick = function(){
 							if(scanClickCount == 0){
 								$('#scanIMG').attr('src','1');
 								$('#manHref').text('Next');
-						}else if (scanClickCount == 1) {
+							}else if (scanClickCount == 1) {
 								$('#scanIMG').attr('src','2');
 								$('#manHref').text('Finished');
-						}else if (scanClickCount == 2) {
+							}else if (scanClickCount == 2) {
 								$('#scanIMG').attr('src','3');
 								$('#manHref').css('display','none');
-							
-					}
+							}
+							scanClickCount++;
 						}
 							
-											
+						var scanClick1 = function(){
+							alert('test');
+						}					
 											
 }
  
