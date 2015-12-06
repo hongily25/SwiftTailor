@@ -299,11 +299,11 @@ img#scanIMG {
     background-color: #666;
 }
 
-img[src="http://i.imgur.com/k7jdVAO.png"] {
-	height: 100px;
-	width: 600px;
+img[src="http://i.imgur.com/g0rkAV4.png"] {
+	height: 200px;
+	width: 700px;
 	position: absolute;
-	left:190px;
-	top:1281px;
+	left:140px;
+	top:1182px;
 	overflow:hidden;
 }
