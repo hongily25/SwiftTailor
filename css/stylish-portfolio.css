@@ -240,4 +240,9 @@ footer {
 
 #scanData > table > tbody > tr > td > b {
 	color: #000;
+	padding: 30px;
+}
+
+#scanData > table {
+	margin:0 auto;
 }
