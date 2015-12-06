@@ -62,7 +62,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Swift Tailor</h1>
-						<h3>An online 3D tailor that scans your measurements and matches you with your ideal fit.</h3><br>
+						<h3>A virtual tailor that scans your measurements and matches you with your ideal fit.</h3><br>
 					<h4>Scroll down for more</h4><br>
 					<a href="#about" style="font-size:40px;background-color:rgba(255, 255, 255, 0.5);padding:10px 15px 0;border-radius:10px"><span class="glyphicon glyphicon-triangle-bottom"></span></a><br>
 					
@@ -219,7 +219,35 @@ $( document ).ready( manFunc );
 										</tr>
 										</table>  </div>
 									
-								<br><br>
+								<br><hr style="height:10px;color:#000"><br>
+									
+									<h1>Select garment:</h1><br>
+									
+									<select>
+									 <option>Shirt</option>
+									 <option>Jacket</option>
+									 <option>Pants</option>
+									 <option>Socks</option>
+									 <option>Shoes</option>
+									 <option>Underwear</option>
+									 <option>Hat</option>
+									 <option>Sweater</option>
+									 <option>Shorts</option>
+									</select>
+									
+									<br><br><br>
+									<a class="btn btn-dark btn-lg" href="">Preview with webcam</a> 
+									<a class="btn btn-dark btn-lg" href="">Preview with projector</a> 
+									<a class="btn btn-dark btn-lg">Preview in virtual reality</a> 
+									
+									<br><br><br>
+									
+									<div id="container">
+										<video autoplay="true" id="videoElement">
+											
+										</video>
+									</div>
+									
 									
                     <!-- /.row (nested) -->
                 </div>
@@ -299,6 +327,25 @@ $( document ).ready( manFunc );
         });
     });
     </script>
+	
+	<script>
+		var video = document.querySelector("#videoElement");
+
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+		if (navigator.getUserMedia) {       
+				navigator.getUserMedia({video: true}, handleVideo, videoError);
+		}
+
+		function handleVideo(stream) {
+				video.src = window.URL.createObjectURL(stream);
+		}
+
+		function videoError(e) {
+				// do something
+		}	
+	</script>
+
 
 </body>
 

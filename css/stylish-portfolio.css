@@ -155,11 +155,20 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(http://hedford.com/blog/wp-content/uploads/2014/08/men-suit.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.header h1, .header h2, .header h3,  
+.header h4  {
+	color: #FFF;
+}
+
+.header a {
+	color: #FFF;
 }
 
 /* About */
@@ -259,6 +268,33 @@ input{
 	color: black;
 }
 
+#portfolio select, #portfolio select option{
+	color: black;
+}
+
 img#scanIMG {
 	height: 350px;
+}
+
+#portfolio h1 {
+	color: #000;
+}
+
+#portfolio select {
+	width: 350px;
+}
+
+#portfolio .btn {
+	margin-right: 30px;
+}
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 0;
+}
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
 }
