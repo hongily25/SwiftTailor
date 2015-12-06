@@ -246,3 +246,7 @@ footer {
 #scanData > table {
 	margin:0 auto;
 }
+
+#scanData input {
+	margin: 20px;
+}
