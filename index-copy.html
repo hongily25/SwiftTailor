@@ -65,8 +65,8 @@
         <div class="text-vertical-center"><br><br><br><br><br><br><br><br><br>
 					<img src="img/logo_white.png" style="width:250px;height:250px">
 						<h3>A virtual tailor that scans your measurements and matches you with your ideal fit.</h3><br>
-					<h4>Click for more</h4><br>
-					<a href="#about" style="font-size:40px;padding:10px 15px 0;border-radius:10px"><span class="glyphicon glyphicon-triangle-bottom"></span></a><br>
+					<h4>Click for more</h4>
+					<a href="#about" style="font-size:40px;padding:10px 15px 0;border-radius:10px"><span class="glyphicon glyphicon-triangle-bottom"></span></a><br><br>
 					
         </div> 
 			
@@ -94,7 +94,7 @@
 								$('#manHref').text('Next');
 							}else if (scanClickCount == 1) {
 								$('#scanIMG').attr('src','http://i.imgur.com/8mXVTvr.png');
-								$('#manHref').text('Last step');
+								$('#manHref').text('Finished');
 							}else if (scanClickCount == 2) {
 								$('#scanIMG').attr('src','http://i.imgur.com/xfQCDp3.png');
 								$('#manHref').css('display','none');
@@ -222,10 +222,11 @@ $( document ).ready( manFunc );
 										<td><b>Half Thigh</b><br><input></td>
 										<td><b>Outseam Pants Length</b><br><input></td>
 										</tr>
-										</table>  </div>
+										</table>  <br><a class='btn btn-dark btn-lg' style='border-radius:10px;width:200px' target='_blank' href="#selectGarment">Go to fitting room</a></div>
 									
 								<br><hr style="height:10px;color:#000"><br>
 									
+									<p id="selectGarment"></p>
 									<h1>Select garment:</h1><br>
 									
 									<select>
@@ -241,7 +242,7 @@ $( document ).ready( manFunc );
 									</select>
 									
 									<br><br><br>
-									<a class="btn btn-dark btn-lg" href="">Preview with webcam</a> 
+									<div id="webcamButton" class="btn btn-dark btn-lg" >Preview with webcam</div> 
 									<a class="btn btn-dark btn-lg" href="">Preview with projector</a> 
 									<a class="btn btn-dark btn-lg">Preview in virtual reality</a> 
 									
@@ -331,24 +332,30 @@ $( document ).ready( manFunc );
             }
         });
     });
-    </script>
-	
-	<script>
-		var video = document.querySelector("#videoElement");
 
-		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+		$('#webcamButton').click(function(){
+			
+			var video = document.querySelector("#videoElement");
 
-		if (navigator.getUserMedia) {       
-				navigator.getUserMedia({video: true}, handleVideo, videoError);
-		}
+			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-		function handleVideo(stream) {
-				video.src = window.URL.createObjectURL(stream);
-		}
+			if (navigator.getUserMedia) {       
+					navigator.getUserMedia({video: true}, handleVideo, videoError);
+			}
+			
+			
+			$('#container').append("<img src='http://i.imgur.com/VcGLmxW.png'>");
 
-		function videoError(e) {
-				// do something
-		}	
+			function handleVideo(stream) {
+					video.src = window.URL.createObjectURL(stream);
+			}
+			
+
+			function videoError(e) {
+					// do something
+			}			
+		});
+
 	</script>
 
 

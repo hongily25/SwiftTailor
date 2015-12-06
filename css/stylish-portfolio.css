@@ -298,3 +298,12 @@ img#scanIMG {
     height: 375px;
     background-color: #666;
 }
+
+img[src="http://i.imgur.com/VcGLmxW.png"] {
+	height: 100px;
+	width: 500px;
+	position: absolute;
+	left:240px;
+	top:1200px;
+	overflow:hidden;
+}
