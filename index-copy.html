@@ -71,7 +71,7 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about" style="height:800px;">
+    <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -79,7 +79,7 @@
             <a href="#services" class="btn btn-dark btn-lg" style="border-radius:10px;width:150px" onclick="manFunc()">Man</a>
 									<script>
 										function manFunc( jQuery ) {
-											
+											$('#about').css('height','300');
 										document.getElementById('selectIMG').innerHTML = '';
    $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img id='scanIMG' src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><div class='btn btn-light btn-lg' id='manHref' style='border-radius:10px;width:150px' target='_blank'>Start scan</div>");
 		
@@ -99,12 +99,8 @@
 							}
 							scanClickCount++;
 						}
-							
-						var scanClick1 = function(){
-							alert('test');
-						}		
-						
-						$('#manHref').click(scanClick1);
+
+						$('#manHref').click(scanClick);
 											
 }
  
