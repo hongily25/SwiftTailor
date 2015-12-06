@@ -80,8 +80,25 @@
 									<script>
 										function manFunc( jQuery ) {
 										document.getElementById('selectIMG').innerHTML = '';
-   $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><a href='index-copy2.html' class='btn btn-light btn-lg' id='manHref'style='border-radius:10px;width:150px' target='_blank'>Start scan</a>");
-				$('#manHref').click(function() { $('#manHref').text('Next') });							
+   $('#selectIMG').append("<h2>Great! Now, stand like this.</h2><br><br><img id='scanIMG' src='http://hongily25.github.io/SwiftTailor/img/stand-copy.png'><br><br><a href='#' class='btn btn-light btn-lg' id='manHref'style='border-radius:10px;width:150px' target='_blank'>Start scan</a>");
+		
+						$('#manHref').click(scanClick);
+											
+						var scanClickCount = 0;
+						var scanClick = function(){
+							if(scanClickCount == 0){
+								$('#scanIMG').attr('src','1');
+								$('#manHref').text('Next');
+						}else if (scanClickCount == 1) {
+								$('#scanIMG').attr('src','2');
+								$('#manHref').text('Finished');
+						}else if (scanClickCount == 2) {
+								$('#scanIMG').attr('src','3');
+								$('#manHref').css('display','none');
+							
+						}
+							
+											
 											
 }
  
@@ -130,16 +147,46 @@ $( document ).ready( manFunc );
         <!-- /.container -->
     </section>
 
-    
+        <section id="portfolio" class="portfolio bg-primary" style="background-color:#FFF">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    
+                    
+									<div id="scanData"><table>
+										<tr>
+										<td><b>Height:</b><br><input></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										</tr>
+										<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										</tr>
+										</table>  </div>
+									
+								<br><br>
+									
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>The Standard Hotel</strong>
                     </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <p>550 South Flower Ave.<br>Los Angeles CA, 900025</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
