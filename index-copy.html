@@ -92,10 +92,14 @@
 								$('#manHref').text('Next');
 							}else if (scanClickCount == 1) {
 								$('#scanIMG').attr('src','2');
-								$('#manHref').text('Finished');
+								$('#manHref').text('Last step');
 							}else if (scanClickCount == 2) {
 								$('#scanIMG').attr('src','3');
 								$('#manHref').css('display','none');
+								$('#scanData').prepend("<h2 style='color:#000'>You're finished! Here are your results:</h2><br>");
+								$('html').animate({
+		scrollTop: $("#portfolio").offset().top
+	},1000);
 							}
 							scanClickCount++;
 						}
