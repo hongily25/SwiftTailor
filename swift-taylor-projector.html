@@ -1,0 +1,62 @@
+<!-- by Brian Cottrell                              -->
+<!-- 03-07-2015                                     -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Helper</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+        	body{
+        		margin: 0px;
+        		font-family: arial;
+        		color: rgb(10,30,150);
+				background: #000;
+        	}
+			.garment-selected{
+				position:absolute;
+				margin-top: 10%;
+				margin-left: 30%;
+				width: 500px;
+			}
+			.garment-style{
+				position:absolute;
+				margin-left: 5%;
+				margin-top: 10%;
+				display: 'none';
+			}
+        </style>
+
+		<div>
+			<img class="garment-selected" src="http://i.imgur.com/y9TNQWM.png">
+		</div>
+		
+		<div>
+
+		</div>
+			
+        <script>
+			var cloths = [
+				"http://i.imgur.com/FPa30QE.png",
+				"http://i.imgur.com/cYF0aau.png",
+				"http://i.imgur.com/FgZksdG.png",
+				"http://i.imgur.com/p532y9R.png",
+				"http://i.imgur.com/3MJ4ijR.png",
+				"http://i.imgur.com/CXU3sLi.png",
+				"http://i.imgur.com/ViS0m8c.png",
+				"http://i.imgur.com/Emcu2mZ.png",
+				"http://i.imgur.com/eNG8lbj.png",
+				"http://i.imgur.com/Mlx6Bdp.png"
+			];
+			var clothsIndex = 0;
+			window.addEventListener('click', function(){
+				document.getElementsByClassName('garment-selected')[0].src = cloths[clothsIndex];
+				clothsIndex++;
+				if(clothsIndex >= cloths.length){
+					clothsIndex = 0;
+				}
+			});
+        </script>
+    </body>
+</html>
