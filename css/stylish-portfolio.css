@@ -301,9 +301,9 @@ img#scanIMG {
 
 img[src="http://i.imgur.com/k7jdVAO.png"] {
 	height: 100px;
-	width: 550px;
+	width: 600px;
 	position: absolute;
-	left:220px;
-	top:1200px;
+	left:190px;
+	top:1281px;
 	overflow:hidden;
 }
